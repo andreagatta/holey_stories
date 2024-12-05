@@ -1,0 +1,22 @@
+:root{
+    --primary-color: #E5989B;
+    --secondary-color: #E5989B;
+    --hover-color: #cf95a0;
+    --active-color: #FFB4A2;
+    --text-color: #521420;
+    --primary-bg-color: #f0d4ce;
+    --secondary-bg-color: #ffffff;
+    --card-bg-color: rgba(113, 113, 113, 0.1);
+    --card-hover-bg-color: rgba(255, 255, 255, 0.1);
+}
+
+body {
+    background-image: radial-gradient(var(--primary-bg-color), var(--secondary-bg-color));
+}
+
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: "Nunito", sans-serif;
+}
