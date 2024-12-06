@@ -1,13 +1,8 @@
 <?php 
-
-
     session_start();
 
     $storiaRandom = null;
     $paroleMancanti = null;
-
-    $_SESSION["storiaRandom"] = $storiaRandom;
-    $_SESSION["paroleMancanti"] = $paroleMancanti;
 
     function initStoria() {
         $storie = glob(__DIR__ . '/../assets/storie/*.txt');
@@ -20,6 +15,9 @@
 
         preg_match_all('/\{([^}]+)\}/', $storiaRandom, $matches);
         $paroleMancanti = $matches[1];
+
+        $_SESSION["storiaRandom"] = $storiaRandom;
+        $_SESSION["paroleMancanti"] = $paroleMancanti;
     }
 
     function assemblaStoria($nuoveParole) {
@@ -28,6 +26,7 @@
                 $storiaRandom = preg_replace('/' . preg_quote($placeholder, '/') . '/', $nuoveParole[$index], $storiaRandom, 1);
             }
         }
+        $_SESSION["storia"] = $storiaRandom;
     }
     
 ?>

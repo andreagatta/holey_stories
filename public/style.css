@@ -3,7 +3,7 @@
     --secondary-color: #E5989B;
     --hover-color: #cf95a0;
     --active-color: #FFB4A2;
-    --text-color: #521420;
+    --text-color: #9a4f64;
     --primary-bg-color: #f0d4ce;
     --secondary-bg-color: #ffffff;
     --card-bg-color: rgba(113, 113, 113, 0.1);
@@ -11,7 +11,7 @@
 }
 
 body {
-    background-image: radial-gradient(var(--primary-bg-color), var(--secondary-bg-color));
+    background-image: linear-gradient(45deg, var(--primary-bg-color) 60%, var(--secondary-bg-color));
 }
 
 *{
